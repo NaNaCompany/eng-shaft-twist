@@ -1,0 +1,61 @@
+{
+  "id": "E037",
+  "title": "원형 축 비틀림각 계산기",
+  "inputs_text": "토크 T [N·m], 길이 L [m], 전단탄성계수 G [Pa], 극단면2차모멘트 J [m⁴]",
+  "formula": "φ = T L / (G J)",
+  "output_text": "양 끝 사이 비틀림각 φ [rad]",
+  "assumptions": "L,G,J>0. 균일 원형축·일정 토크·선형 탄성에 한정한다. 질량관성모멘트 kg·m²를 입력하지 않게 단위를 구분한다. 도 단위는 동일 수치의 표시 변환이다.",
+  "purpose": "축 비틀림각 계산 / 회전축 강성 검산",
+  "sources": [
+    {
+      "label": "University of Illinois · Torsion",
+      "url": "https://mechref.engr.illinois.edu/sol/torsion.html"
+    }
+  ],
+  "slug": "eng-shaft-twist",
+  "category": "재료",
+  "result_label": "양 끝 사이 비틀림각 φ",
+  "result_dimension": "angle",
+  "fields": [
+    {
+      "key": "t",
+      "label": "토크 T",
+      "dimension": "torque",
+      "example": 100,
+      "constraint": "signed",
+      "display_unit": "Nm",
+      "display_value": "100"
+    },
+    {
+      "key": "l",
+      "label": "축 길이 L",
+      "dimension": "length",
+      "example": 1,
+      "constraint": "positive",
+      "display_unit": "m",
+      "display_value": "1"
+    },
+    {
+      "key": "g",
+      "label": "전단탄성계수 G",
+      "dimension": "pressure",
+      "example": 80000000000.0,
+      "constraint": "positive",
+      "display_unit": "GPa",
+      "display_value": "80"
+    },
+    {
+      "key": "j",
+      "label": "극단면2차모멘트 J",
+      "dimension": "areaInertia",
+      "example": 1e-06,
+      "constraint": "positive",
+      "display_unit": "mm4",
+      "display_value": "1000000"
+    }
+  ],
+  "site": "https://nanalab.kr/eng-shaft-twist/",
+  "repository": "https://github.com/NaNaCompany/eng-shaft-twist",
+  "condition": "",
+  "output_unit": "deg"
+}
